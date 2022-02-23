@@ -4,11 +4,10 @@ package com.codekul.Java28SeptSpring.registration.domain;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Getter
@@ -23,9 +22,11 @@ public class Registration {
     private String Name;
 
     @NotNull(message = "email can not be null")
+    @Email(message = "Enter Valid mail")
     private String email;
 
     @NotNull(message = "Password Can Not Be Null")
+    @Size(min = 8,message = "Password cannot be less than 8 ")
     private  String password;
 
 

@@ -28,8 +28,8 @@ public class Java28SeptSpringApplication {
 		girl.study();
 
 		Boy boy=context.getBean(Boy.class);
-//		boy.study(1);
-		boy.exce();
+		boy.study(1);
+//		boy.exce();
 
 
 	}
