@@ -3,6 +3,7 @@ package com.codekul.Java28SeptSpring;
 import com.codekul.Java28SeptSpring.aop.Boy;
 import com.codekul.Java28SeptSpring.aop.Girl;
 import com.codekul.Java28SeptSpring.aop.Human;
+import com.codekul.Java28SeptSpring.aop.MyException;
 import com.codekul.Java28SeptSpring.di.Company;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Java28SeptSpringApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MyException {
 		ConfigurableApplicationContext context= SpringApplication.run(Java28SeptSpringApplication.class, args);
 
 		Company e = context.getBean(Company.class);
@@ -27,7 +28,8 @@ public class Java28SeptSpringApplication {
 		girl.study();
 
 		Boy boy=context.getBean(Boy.class);
-		boy.study(1);
+//		boy.study(1);
+		boy.exce();
 
 
 	}

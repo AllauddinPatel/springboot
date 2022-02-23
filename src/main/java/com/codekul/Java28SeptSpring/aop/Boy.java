@@ -8,4 +8,8 @@ public class Boy {
         System.out.println("Boy Study");
         return 100;
     }
+
+    public MyException exce() throws MyException {
+        throw new MyException("My Exception");
+    }
 }

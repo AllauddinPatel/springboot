@@ -29,4 +29,9 @@ public class Human {
     public void afterret(int value){
         System.out.println("After returning "+value);
     }
+
+    @AfterThrowing(pointcut = "pointCut()" ,throwing = "value")
+    public void afterthr(MyException value){
+        System.out.println("After Throwing "+value);
+    }
 }
